@@ -11,8 +11,9 @@ def mapper():
         words = line.split()
         
         for word in words:
+            # what about stop words ?
             word = word.lower()
-            l = os.getenv('mapreduce_map_input_file','noname')
+            l = os.getenv('map_input_file','noname')
             l = l.split("/")
             filename = l[len(l) - 1]
             #print("{}\t{}\t{}".format(filename, word, 1))
