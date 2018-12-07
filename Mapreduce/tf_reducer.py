@@ -33,7 +33,7 @@ def tfreduce():
             tmp[current_word] = current_count
             if current_file:
                 for key in tmp:
-                    print('{}\t{}'.format(current_file+' '+key, tmp[key]/float(number_of_terms)))
+                    print('{}\t{}'.format(key + '@' + current_file, tmp[key]/float(number_of_terms)))
             current_file = filename
             current_word = word
             current_count = count
@@ -42,8 +42,8 @@ def tfreduce():
     
     # printing results for the last file
     for key in tmp:
-        print('{}\t{}'.format(current_file+' '+key, tmp[key]/float(number_of_terms)))
-    print('{}\t{}'.format(current_file+' '+current_word, current_count/float(number_of_terms)))
+        print('{}\t{}'.format(key + '@' + current_file, tmp[key]/float(number_of_terms)))
+    print('{}\t{}'.format(current_word + '@' + current_file, current_count/float(number_of_terms)))
 
 
 if __name__ == '__main__':
