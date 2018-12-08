@@ -16,7 +16,6 @@ def mapper():
             l = os.getenv('map_input_file','noname')
             l = l.split("/")
             filename = l[len(l) - 1]
-            #print("{}\t{}\t{}".format(filename, word, 1))
             print('{}\t{}'.format(filename+'@'+word, 1))
 
 
