@@ -4,9 +4,6 @@ import sys
 
 
 def idf_mapper():
-    current_file = None
-    # N is the total number of documents
-    N = 0
     for line in sys.stdin:
         line = line.strip()
         filename_word, tf_score = line.split('\t', 1)
