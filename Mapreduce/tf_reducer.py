@@ -1,7 +1,6 @@
 #!usr/bin/python
 import sys
 
-
 def tfreduce():
     current_file = None
     filename = None
@@ -44,7 +43,6 @@ def tfreduce():
     for key in tmp:
         print('{}\t{}'.format(key + '@' + current_file, tmp[key]/float(number_of_terms)))
     print('{}\t{}'.format(current_word + '@' + current_file, current_count/float(number_of_terms)))
-
 
 if __name__ == '__main__':
     tfreduce()
