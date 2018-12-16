@@ -1,8 +1,6 @@
 #!usr/bin/python
-
 import sys
 from math import log10
-
 
 def idf_reducer():
     current_word = None
@@ -41,8 +39,5 @@ def idf_reducer():
         key_df = key.split('@', 1)[0]
         tf_idf_score = tf_scores[key] * log10(N/float(document_frequency[key_df]))
         print('{}\t{}'.format(key, tf_idf_score))
-
-        
-
 if __name__ == '__main__':
     idf_reducer()
